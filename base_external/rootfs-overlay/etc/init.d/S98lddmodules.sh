@@ -12,7 +12,7 @@ case "$1" in
         echo "Removing user modules"
         /usr/bin/scull_unload
         /usr/bin/module_unload faulty
-        start-stop-daemon -S -n init -a /usr/bin/module_unload -- hello
+        rmmod hello
         ;;
     *)
         echo "Usage: $0 {start|stop}"
